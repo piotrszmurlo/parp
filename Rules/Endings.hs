@@ -60,14 +60,3 @@ ending5Text = [
     "[Ciąg dalszy nastąpi...]",
     "" 
     ]
-
-ending6Text = [
-    "[Zakończenie 6 - Asystent Mistrza Folkisa]",
-    "",
-    "Na wiele lat po uczcie, ludze wspominali z uznaniem pokaz...",
-    "A pamiętacie jak prezentował mistrz małodobry po raz pierwszy swoje największe odkryce? Te automatyczne zaciskacze miażdżące śrubami palce były niesamowite!",
-    "Tym jest postęp szanowni państwo! Szybsze zeznania, szybsze sądy, szybsza sprawiedliwość dla złoczyńców!",
-    "Piali z zachwytu",
-    "A nad asystentem wierzby szumiały...",
-    "" 
-    ]
