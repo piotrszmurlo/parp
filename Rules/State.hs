@@ -1,7 +1,8 @@
 module Rules.State where
 
 data State = State
-  { endingNumber :: Integer
+  { 
+    endingNumber :: Integer
   }
 
 isGameInProgress :: State -> Bool

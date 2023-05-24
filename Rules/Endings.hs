@@ -3,14 +3,15 @@ import Rules.State
 import Rules.Utils
 
 getEndingForEndingNumber :: Integer -> [String]
-getEndingForEndingNumber endingNumber
-  | endingNumber == 0  = ["Game in progress"]
-  | endingNumber == 1 = ending1Text
-  | endingNumber == 2  = ending2Text
-  | endingNumber == 3  = ending3Text
-  | endingNumber == 4  = ending4Text
-  | endingNumber == 5  = ending5Text
-  | endingNumber == 6  = ending6Text
+getEndingForEndingNumber endingNumber =
+  case endingNumber of
+    0 -> ["Game in progress"]
+    1 -> ending1Text
+    2 -> ending2Text
+    3 -> ending3Text
+    4 -> ending4Text
+    5 -> ending5Text
+    6 -> ending6Text
 
 printEnding :: State -> IO()
 printEnding state = printLines (getEndingForEndingNumber (endingNumber state))
