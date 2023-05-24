@@ -1,5 +1,6 @@
 module Rules.Utils where
-    
+import Rules.State
+
 explicitWarningText = [
     "Witaj w grze 'Słów kilka o szkodliwości alkoholu'",
     "",
@@ -36,3 +37,10 @@ readCommand = do
 -- print strings from list in separate lines
 printLines :: [String] -> IO ()
 printLines xs = putStr (unlines xs)
+
+sign :: State -> State
+sign state =
+    case stateName state of
+        Ostrzezenie -> State 5 Intro
+        otherwise -> state
+

@@ -7,18 +7,12 @@ gameIteration :: State -> IO ()
 gameIteration state = do
     cmd <- readCommand
     case cmd of
-        "komendy" -> do printAvailableCommands
-                        gameLoop state
-        "zastanow_sie" -> do printAvailableCommands
-                             gameLoop state
-        "rozejrzyj_sie" -> do printAvailableCommands
-                              gameLoop state
-        "podejdz Osoba" -> do printAvailableCommands
-                              gameLoop state
-        "pomocy" -> do printAvailableCommands
-                       gameLoop state
-        "podpisz" -> do printAvailableCommands
-                        gameLoop state
+        "komendy" -> do gameLoop state
+        "zastanow_sie" -> do gameLoop state
+        "rozejrzyj_sie" -> do gameLoop state
+        "podejdz Osoba" -> do gameLoop state
+        "pomocy" -> do gameLoop state
+        "podpisz" -> do gameLoop (sign state)
         "koniec" -> return ()
         _ -> do printUnknownCommand
                 gameLoop state
@@ -27,7 +21,6 @@ gameLoop :: State -> IO ()
 gameLoop state
   | isGameInProgress state = gameIteration state
   | not (isGameInProgress state) = printEnding state
-  | otherwise = gameIteration state
 
 main = do
     printExplicitWarning
