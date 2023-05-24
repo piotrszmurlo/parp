@@ -5,20 +5,21 @@ import Rules.Utils
 getEndingForEndingNumber :: Integer -> [String]
 getEndingForEndingNumber endingNumber
   | endingNumber == 0  = ["Game in progress"]
-  | endingNumber == 1 = zakonczenie1Text
-  | endingNumber == 2  = zakonczenie2Text
+  | endingNumber == 1 = ending1Text
+  | endingNumber == 2  = ending2Text
 
 printEnding :: State -> IO()
 printEnding state = printLines (getEndingForEndingNumber (endingNumber state))
 
-zakonczenie1Text = [
+ending1Text = [
     "[Zakończenie 1 - Mile Spędzona Nocka]",
     "",
     "Wcale nie było tu tak źle jak mówił ten stary jasnowidz - Pomyślałem ",
     "Całkiem mile spędzona nocka...",
     "" 
     ]
-zakonczenie2Text = [
+
+ending2Text = [
     "[Zakończenie 2 - Śmierć przez nadmiar zelaza]",
     "",
     "Rozpętała się bitwa na miecze. Bohater nie miał zbyt duzej szansy przeciwko trzem straznikom.",

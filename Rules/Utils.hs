@@ -1,6 +1,6 @@
 module Rules.Utils where
     
-ostrzezenieWstepneText = [
+explicitWarningText = [
     "Witaj w grze 'Słów kilka o szkodliwości alkoholu'",
     "",
     "Ze względu na skłonność do alkoholizmu, przekleństwa i cynizm",
@@ -10,7 +10,7 @@ ostrzezenieWstepneText = [
     ""
     ]
 
-dostepneKomendyText = [
+availableCommandsText = [
     "Dostępne komendy:",
     "",
     "zastanow_sie  -> Zobacz co ci w sercu gra",
@@ -21,11 +21,11 @@ dostepneKomendyText = [
     ""
     ]
 
-nieznanaKomendaText = ["Nieznana komenda. Uzyj <pomoc> aby uzyskać listę dostępnych komend", ""]
+unknownCommandText = ["Nieznana komenda. Uzyj <pomoc> aby uzyskać listę dostępnych komend", ""]
 
-printOstrzezenieWstepne = printLines ostrzezenieWstepneText
-printDostepneKomendy = printLines dostepneKomendyText
-printNieznanaKomendaText = printLines nieznanaKomendaText
+printExplicitWarning = printLines explicitWarningText
+printAvailableCommands = printLines availableCommandsText
+printUnknownCommand = printLines unknownCommandText
 
 readCommand :: IO String
 readCommand = do
