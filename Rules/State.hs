@@ -9,4 +9,4 @@ isGameInProgress state = endingNumber state == 0
 
 initialState =
   State
-    1
+    6
