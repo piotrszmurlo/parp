@@ -1,6 +1,7 @@
 module Rules.Help where
 import Rules.State
 import Rules.Utils
+import Data.Map as Map
 
 type HelpMessage = [String]
 
@@ -9,7 +10,7 @@ displayHelp state = case Map.lookup (stateName state) helpMessages of
     Just message -> message
     Nothing -> ["Unknown state"]
 
-helpMessages :: Map.Map State ThinkMessage
+helpMessages :: Map.Map Name ThinkMessage
 helpMessages = Map.fromList
   [ (Ostrzezenie, ["PLACEHOLDER!"]),
    (Intro, ["PLACEHOLDER!"]),
@@ -27,5 +28,6 @@ helpMessages = Map.fromList
 
 pomocy :: State -> State
 pomocy state = do
-  displayHelp state
+  let help = displayHelp state
+  putStrLn (unlines help)
   state

@@ -1,6 +1,7 @@
 module Rules.Think where
 import Rules.State
 import Rules.Utils
+import Data.Map as Map
 
 type ThinkMessage = [String]
 
@@ -9,7 +10,7 @@ displayThink state = case Map.lookup (stateName state) thinkMessages of
     Just message -> message
     Nothing -> ["Unknown state"]
 
-thinkMessages :: Map.Map State ThinkMessage
+thinkMessages :: Map.Map Name ThinkMessage
 thinkMessages = Map.fromList
   [ (Ostrzezenie, ["PLACEHOLDER!"]),
    (Intro, ["PLACEHOLDER!"]),
@@ -72,5 +73,6 @@ thinkMessages = Map.fromList
 
 zastanow :: State -> State
 zastanow state = do
-    displayThink state
-    state
+  let help = displayThink state
+  putStrLn (unlines help)
+  state

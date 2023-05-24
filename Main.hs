@@ -4,6 +4,8 @@ import Rules.Endings
 import Rules.State
 import Rules.Think
 import Rules.Help
+import Rules.Choices
+import Rules.Main
 
 gameIteration :: State -> IO ()
 gameIteration state = do
