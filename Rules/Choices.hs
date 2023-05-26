@@ -19,6 +19,10 @@ choiceOne state
                                printLines karczmaPijatykaAllChoicesText
                                printStateText pobudkaLochState
                                return pobudkaLochState
+            Burdel -> do
+                      printLines burdelChoiceOneText
+                      let endingState = state {endingNumber = 1}
+                      return endingState
             otherwise ->  do printLines ["choiceOne"]
                              return state
 
@@ -35,6 +39,9 @@ choiceTwo state
                                printLines karczmaPijatykaAllChoicesText
                                printStateText pobudkaLochState
                                return pobudkaLochState
+            Burdel -> do
+                      let endingState = state {endingNumber = 1}
+                      return endingState
             otherwise ->  do printLines ["choiceTwo"]
                              return state
 

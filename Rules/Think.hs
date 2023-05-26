@@ -3,6 +3,7 @@ import Rules.State
 import Rules.Utils
 import Rules.KarczmaPijatyka
 import Rules.KarczmaIntro
+import Rules.Burdel
 
 think :: State -> IO State
 think state = do
@@ -10,4 +11,5 @@ think state = do
     case stateName state of
         KarczmaIntro -> return karczmaIntroStateAfterThink
         KarczmaPijatyka -> return karczmaPijatykaStateAfterThink
+        Burdel -> return burdelStateAfterThink
         otherwise -> return state
