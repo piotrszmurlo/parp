@@ -49,6 +49,13 @@ sign state =
         Ostrzezenie -> karczmaIntroState
         otherwise -> state
 
+-- parametr 2 lub 3 -> ilosc opcji do odblokowania
+unlockChoices :: State -> Int -> State
+unlockChoices state numberOfOptions
+    | numberOfOptions == 2 = state { optionOneEnabled = True, optionTwoEnabled = True}
+    | numberOfOptions == 3 = state { optionOneEnabled = True, optionTwoEnabled = True, optionThreeEnabled = True}
+    | otherwise = state
+
 -- to do wyrzucenia pozniej
 debugEndState1 = 
   State

@@ -13,18 +13,6 @@ karczmaIntroState =
     False
     False
 
-karczmaIntroStateAfterThink = 
-  State
-    0
-    KarczmaIntro
-    karczmaIntroText
-    karczmaIntroHelpText
-    karczmaIntroLookAroundText
-    karczmaIntroThinkText
-    True
-    True
-    True
-
 karczmaIntroHelpText = ["Może warto chwilę posiedzieć i posłuchać dalszej dyskusji?"]
 
 karczmaIntroText = [

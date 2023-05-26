@@ -13,18 +13,6 @@ karczmaPijatykaState =
     False
     False
 
-karczmaPijatykaStateAfterThink = 
-  State
-    0
-    KarczmaPijatyka
-    karczmaPijatykaText
-    karczmaPijatykaHelpText
-    karczmaPijatykaLookAroundText
-    karczmaPijatykaThinkText
-    True
-    True
-    True
-
 karczmaPijatykaHelpText = ["Msze, *hic*, jszcz troh alllk?"]
 
 karczmaPijatykaText = [    

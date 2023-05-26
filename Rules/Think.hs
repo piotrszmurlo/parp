@@ -9,7 +9,7 @@ think :: State -> IO State
 think state = do
     printLines (thinkText state)
     case stateName state of
-        KarczmaIntro -> return karczmaIntroStateAfterThink
-        KarczmaPijatyka -> return karczmaPijatykaStateAfterThink
-        Burdel -> return burdelStateAfterThink
+        KarczmaIntro -> return (unlockChoices state 3)
+        KarczmaPijatyka -> return (unlockChoices state 3)
+        Burdel -> return (unlockChoices state 2)
         otherwise -> return state

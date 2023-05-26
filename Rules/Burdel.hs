@@ -12,18 +12,6 @@ burdelState =
     False
     False
 
-burdelStateAfterThink = 
-  State
-    0
-    Burdel
-    burdelText
-    burdelHelpText
-    burdelLookAroundText
-    burdelThinkText
-    True
-    True
-    False
-
 burdelText =  [
     "Świeże powietrze uderza mnie w twarz. Mrużąc oczy w wietrze, spostrzegam nagle po drugiej stronie ulicy świecący w nocy szyld 'Dom spotkań: Zalotka'.",
     "Nie znam tego geniusza, ale postawienie domu publicznego koło karczmy musiało być strzałem w dziesiątkę - w końcu kobiety oba te przybytki rozkoszy omijają szerokim łukiem, a już starożytni znali uzależniające połączenie wina i nadobnych kobiet.",
