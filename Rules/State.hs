@@ -1,6 +1,6 @@
 module Rules.State where
 
-data Name = Ostrzezenie | KarczmaIntro | KarczmaPijatyka
+data Name = Ostrzezenie | KarczmaIntro | KarczmaPijatyka | PobudkaLoch | Burdel
 data State = State
   {
     endingNumber :: Integer,

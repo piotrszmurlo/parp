@@ -23,11 +23,14 @@ gameIteration state = do
                 state <- help state
                 gameLoop state
     "jeden" -> do 
-               gameLoop (choiceOne state)
+               state <- choiceOne state
+               gameLoop state
     "dwa" -> do 
-             gameLoop (choiceTwo state)
+             state <- choiceTwo state
+             gameLoop state
     "trzy" -> do 
-              gameLoop (choiceThree state)
+             state <- choiceThree state
+             gameLoop state
     "podpisz" -> do printStateText (sign state)
                     gameLoop (sign state)
     "koniec" -> return ()

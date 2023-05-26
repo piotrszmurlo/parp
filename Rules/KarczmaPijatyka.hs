@@ -9,21 +9,17 @@ karczmaPijatykaState =
     karczmaPijatykaHelpText
     karczmaPijatykaLookAroundText
     karczmaPijatykaThinkText
+    True
+    True
+    True
 
 karczmaPijatykaHelpText = ["Może warto chwilę posiedzieć i posłuchać dalszej dyskusji?"]
 
-karczmaPijatykaText = [
-    "Było ich trzech, a wszyscy potężni i szaleni.",
-    "Mawiano, że mieli kryjówkę w głębi starego boru.",
-    "To właśnie w niej wymyślali kolejne mroczne zaklęcia tworząc nową magię.",
-    "Jednak pewnej bezksiężycowej nocy jeden z ich tworów wyrwał się na wolność...",
-    "",
-    "Ot jakie opowiastki można posłuchać w karczmie. Nawet przyjemny wieczór się zapowiada...",
-    "W głowie już mi przyjemnie szumiało, ale nie miałem zamiaru rezygnować z kolejnych kilku kufli.",
-    "Piwo mieli tu wyśmienite. Mocne, nierozcieńczane wodą. Żyć nie umierać.",
-    "Co prawda w mieszku brzęczały mi ostatnie monety, ale zasłużyłem na relaks.",
-    "Jutro targ to z łatwością zwinę jakąś kasę i jakoś dam radę do następnego zlecenia.",
-    ""
+karczmaPijatykaText = [    
+    "Półtorej godziny później byliśmy już najlepszymi przyjaciółmi.",
+    "Kompani chyba się ucieszyli z mojego towarzystwa, bo co chwile mi stawiali nowe trunki, bym popróbował.",
+    "Grunt to się ustawić. Humor miałem znakomity, zaś ładna kelnerka zanosząca trunki z każdym przyjściem do nas uśmiechała się do mnie coraz milej.",
+    "Trzeba by jej jakoś zaimponować..."
     ]
 
 karczmaPijatykaThinkText = [
@@ -41,6 +37,8 @@ karczmaPijatykaThinkText = [
     ]
 
 karczmaPijatykaLookAroundText = [
-    "Dwoje teraz kłócących się starszych panów",
-    "Osoby: willy, sil"
+    "Dobrze się pije w miłym towarzystwie...",
+    "Osoby: willy, sil",
+    "Ale czy koniecznie ci żołnierze muszą tak dziwnie się gapić?",
+    ""
     ]

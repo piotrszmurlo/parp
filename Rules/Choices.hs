@@ -1,28 +1,39 @@
 module Rules.Choices where
 import Rules.State
 import Rules.Utils
+import Rules.KarczmaPijatyka
+import Rules.KarczmaIntro
 
-
-choiceOne :: State -> State
+choiceOne :: State -> IO State
 choiceOne state
-    | not (optionOneEnabled state) = state
+    | not (optionOneEnabled state) = do printLines ["Nie mam takiego wyboru."]
+                                        return state
     | optionOneEnabled state = do
         case stateName state of
-            KarczmaIntro -> debugEndState1
-            otherwise -> state
+            KarczmaIntro -> do printLines karczmaIntroChoiceOneText
+                               printStateText karczmaPijatykaState
+                               return karczmaPijatykaState
+            otherwise ->  do printLines ["111"]
+                             return state
 
-choiceTwo :: State -> State
+choiceTwo :: State -> IO State
 choiceTwo state
-    | not (optionTwoEnabled state) = state
+    | not (optionTwoEnabled state) = do printLines ["Nie mam takiego wyboru."]
+                                        return state
     | optionTwoEnabled state = do
         case stateName state of
-            KarczmaIntro -> debugEndState3
-            otherwise -> state
+            KarczmaIntro -> do printLines ["222"]
+                               return debugEndState1
+            otherwise ->  do printLines ["222"]
+                             return state
 
-choiceThree :: State -> State
+choiceThree :: State -> IO State
 choiceThree state
-    | not (optionThreeEnabled state) = state
+    | not (optionThreeEnabled state) = do printLines ["Nie mam takiego wyboru."]
+                                          return state
     | optionThreeEnabled state = do
         case stateName state of
-            KarczmaIntro -> debugEndState2
-            otherwise -> state
+            KarczmaIntro -> do printLines ["333"]
+                               return debugEndState3
+            otherwise ->  do printLines ["333"]
+                             return state

@@ -13,6 +13,18 @@ karczmaIntroState =
     False
     False
 
+karczmaIntroStateAfterThink = 
+  State
+    0
+    KarczmaIntro
+    karczmaIntroText
+    karczmaIntroHelpText
+    karczmaIntroLookAroundText
+    karczmaIntroThinkText
+    True
+    True
+    True
+
 karczmaIntroHelpText = ["Może warto chwilę posiedzieć i posłuchać dalszej dyskusji?"]
 
 karczmaIntroText = [
@@ -46,4 +58,25 @@ karczmaIntroThinkText = [
 karczmaIntroLookAroundText = [
     "Dwoje teraz kłócących się starszych panów",
     "Osoby: willy, sil"
+    ]
+
+karczmaIntroChoiceOneText = [
+   "> Chwileczkę panowie",
+    "Wstałem i podszedłem do ich stolika. Trzeba jednak zawalczyć o nastrój. Na nikogo nie można liczyc na tym świecie. Wszystko muszę robić sam",
+    "> Czy bylibyście w stanie opowiedzieć dalej ową historię? Chyba jeszcze jej nie poznałem, a zapowiada się ciekawie",
+    "sam siebie zaskoczyłem takimi ładnymi, gładkimi słówkami. Widać grunt to motywacja",
+    "> A ty coś za jeden?",
+    "> Pewno z daleka",
+    "> Siadaj",
+    "> Dziękuję uprzejmie. Jak robić dobre wrażenie to na całego",
+    "> Kelner - jeszcze piwa dla panów. Na mój koszt! - Zawołałem",
+    "Najwyżej zwieję gdy poproszą o rachunek - dodałem w duchu. Nie pierwszy raz...",
+    "> Nie pij tego piwa. Prosimy o lokalny specjał.",
+    "> Zaraz zobaczysz co to dobry napitek. Napij się i posłuchaj.",
+    "> Król podobno wysłał magów, by zabili paskudę i te pozostałe, co się tam wylęgły. Albowiem nie wiem, czy wiesz, miejsce tamto stało się przeklęte. Przyjechał i rycerz na białym koniu i czcigodny starzec…",
+    "> Zamknij się Willy. Po prostu ich wszystkich uśmierciły i tyle",
+    "> Ja tutaj pieśń bohaterską opowiadam!",
+    "> To śpiewaj gdzie indziej",
+    "Pociągnąłem łyk nowego trunku i z uznaniem popatrzyłem na kufel. Jednak warto było się przysiąść.",
+    ""
     ]

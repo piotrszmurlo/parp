@@ -49,6 +49,7 @@ sign state =
         Ostrzezenie -> karczmaIntroState
         otherwise -> state
 
+-- to do wyrzucenia pozniej
 debugEndState1 = 
   State
     1
