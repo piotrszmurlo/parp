@@ -1,6 +1,6 @@
 module Rules.State where
 
-data Name = Ostrzezenie | KarczmaIntro
+data Name = Ostrzezenie | KarczmaIntro | KarczmaPijatyka
 data State = State
   {
     endingNumber :: Integer,
@@ -8,7 +8,10 @@ data State = State
     stateText :: [String],
     helpText :: [String],
     lookAroundText :: [String],
-    thinkText :: [String]
+    thinkText :: [String],
+    optionOneEnabled :: Bool,
+    optionTwoEnabled :: Bool,
+    optionThreeEnabled :: Bool
   }
 
 isGameInProgress :: State -> Bool
@@ -22,3 +25,6 @@ initialState =
     ["helpOstrzezenie"]
     [""]
     [""]
+    False
+    False
+    False

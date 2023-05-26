@@ -7,8 +7,11 @@ karczmaIntroState =
     KarczmaIntro
     karczmaIntroText
     karczmaIntroHelpText
-    karczmaLookAroundText
-    karczmaThinkText
+    karczmaIntroLookAroundText
+    karczmaIntroThinkText
+    False
+    False
+    False
 
 karczmaIntroHelpText = ["Może warto chwilę posiedzieć i posłuchać dalszej dyskusji?"]
 
@@ -26,7 +29,7 @@ karczmaIntroText = [
     ""
     ]
 
-karczmaThinkText = [
+karczmaIntroThinkText = [
     "> Daj spokój Willy. Wszyscy znamy tę opowieść, a ty po pijaku gadasz jak potłuczony mistrel. Bestia po prostu ich zabiła i kropka. Żadne tam zaryczała. Takie poetycki brednie zostaw zakochanym",
     "A tak miło się słuchało westchnąłem w duchu.",
     "> Ha, ha. Dobre Sil. Sam bym nie wpadł na takie porównanie. Już myślałem, że może walnąć go w łeb, to zacznie gadać po ludzku",
@@ -40,7 +43,7 @@ karczmaThinkText = [
     ""
     ]
 
-karczmaLookAroundText = [
+karczmaIntroLookAroundText = [
     "Dwoje teraz kłócących się starszych panów",
     "Osoby: willy, sil"
     ]

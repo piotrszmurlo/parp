@@ -57,6 +57,10 @@ debugEndState1 =
     [""]
     [""]
     [""]
+    False
+    False
+    False
+
 debugEndState2 = 
   State
     2
@@ -65,6 +69,9 @@ debugEndState2 =
     [""]
     [""]
     [""]
+    False
+    False
+    False
 
 debugEndState3 = 
   State
@@ -74,3 +81,6 @@ debugEndState3 =
     [""]
     [""]
     [""]
+    False
+    False
+    False
