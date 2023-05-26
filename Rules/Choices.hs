@@ -3,6 +3,8 @@ import Rules.State
 import Rules.Utils
 import Rules.KarczmaPijatyka
 import Rules.KarczmaIntro
+import Rules.PobudkaLoch
+import Rules.Burdel
 
 choiceOne :: State -> IO State
 choiceOne state
@@ -13,7 +15,11 @@ choiceOne state
             KarczmaIntro -> do printLines karczmaIntroChoiceOneText
                                printStateText karczmaPijatykaState
                                return karczmaPijatykaState
-            otherwise ->  do printLines ["111"]
+            KarczmaPijatyka -> do 
+                               printLines karczmaPijatykaAllChoicesText
+                               printStateText pobudkaLochState
+                               return pobudkaLochState
+            otherwise ->  do printLines ["choiceOne"]
                              return state
 
 choiceTwo :: State -> IO State
@@ -22,9 +28,14 @@ choiceTwo state
                                         return state
     | optionTwoEnabled state = do
         case stateName state of
-            KarczmaIntro -> do printLines ["222"]
-                               return debugEndState1
-            otherwise ->  do printLines ["222"]
+            KarczmaIntro -> do printLines karczmaIntroChoiceTwoText
+                               printStateText burdelState
+                               return burdelState
+            KarczmaPijatyka -> do 
+                               printLines karczmaPijatykaAllChoicesText
+                               printStateText pobudkaLochState
+                               return pobudkaLochState
+            otherwise ->  do printLines ["choiceTwo"]
                              return state
 
 choiceThree :: State -> IO State
@@ -33,7 +44,12 @@ choiceThree state
                                           return state
     | optionThreeEnabled state = do
         case stateName state of
-            KarczmaIntro -> do printLines ["333"]
-                               return debugEndState3
-            otherwise ->  do printLines ["333"]
+            KarczmaIntro -> do printLines karczmaIntroChoiceThreeText
+                               printStateText burdelState
+                               return burdelState
+            KarczmaPijatyka -> do 
+                               printLines karczmaPijatykaAllChoicesText
+                               printStateText pobudkaLochState
+                               return pobudkaLochState
+            otherwise ->  do printLines ["choiceThree"]
                              return state

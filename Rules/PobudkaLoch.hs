@@ -1,13 +1,18 @@
 module Rules.PobudkaLoch where
-
-PobudkaLoch = 
+import Rules.State
+pobudkaLochState = 
   State
     0
-    KarczmaIntro
-    karczmaIntroText
-    karczmaIntroHelpText
-    karczmaIntroLookAroundText
-    karczmaIntroThinkText
+    PobudkaLoch
+    pobudkaLochText
+    pobudkaLochHelpText
+    pobudkaLochLookAroundText
+    pobudkaLochThinkText
     False
     False
     False
+
+pobudkaLochText =  ["pobudkaLochText"]
+pobudkaLochHelpText = ["pobudkaLochHelpText"]
+pobudkaLochLookAroundText = ["pobudkaLochLookAroundText"]
+pobudkaLochThinkText = ["pobudkaLochThinkText"]

@@ -9,4 +9,5 @@ think state = do
     printLines (thinkText state)
     case stateName state of
         KarczmaIntro -> return karczmaIntroStateAfterThink
+        KarczmaPijatyka -> return karczmaPijatykaStateAfterThink
         otherwise -> return state

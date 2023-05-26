@@ -57,7 +57,8 @@ karczmaIntroThinkText = [
 
 karczmaIntroLookAroundText = [
     "Dwoje teraz kłócących się starszych panów",
-    "Osoby: willy, sil"
+    "Osoby: willy, sil",
+    ""
     ]
 
 karczmaIntroChoiceOneText = [
@@ -80,3 +81,27 @@ karczmaIntroChoiceOneText = [
     "Pociągnąłem łyk nowego trunku i z uznaniem popatrzyłem na kufel. Jednak warto było się przysiąść.",
     ""
     ]
+
+karczmaIntroChoiceTwoText = [
+    "> Psia krew, nie możecie choć na chwilę zamknąć!? Niektórzy próbują się tu kulturalnie urżnąć i zapomnieć o bólu świata bez tego ciągłego poetycznego jazgotu!",
+    "wyrzuciłem z siebie gniewnie.",
+    "> Willy, czy ten smutas ze stolika obok powiedział to co usłyszałem?",
+    "> Nie wiem Sal, ale z pewnością nie podobał mi się jego ton",
+    "Obrzucili mnie taksującymi spojrzeniami. Nie przejąłem się tym zbytnio, będąc z natury krępy i silny rzadko spotykałem ludzi mogących mi zagrozić w walce.",
+    "> Dobrze słyszeliście i mogę powtórzyć Nie spodobały mi się ich wredne uśmiechy",
+    "> Cóż Sal, widać naszemu cukiereczkowi przydałoby się zaszczepić odrobinę szacunku wobec starszych, co ty na to?",
+    "> Uważam to wręcz za karygodne, że zaniedbano tę jakże ważną część edukacji. Ta dzisiejsza młodzież…",
+    "Gdy wstali, szybko oceniłem swoje szanse a następnie z uśmiechem odsunąłem krzesło by przyjąć niewypowiedziane wyzwanie.",
+    " Zaczyna robić się ciekawie…",
+    "Cała karczma na moment ucichła. Zmierzyłem wzrokiem swoich przeciwników.",
+    "Jeden z nich w zamierzył się na mnie nagle kuflem, którego łutem szczęścia udało mi się uniknąć. To samo jednak nie można było powiedzieć o strażnikach w rogu, których jeden z kompanów został znokautowany lecącą porcelaną.",
+    " Gdy i oni zakasali rękawy, rozpętało się pandemonium.",
+    "Pół godziny później, niekoniecznie trzeźwy ale za to hojnie doprawiony zarówno swoimi jak i cudzymi płynami ustrojowymi wytarabaniłem się z karczmy…",
+    ""
+    ]
+
+karczmaIntroChoiceThreeText =   [
+    "Dobra, nie ma co tu siedzieć, jeśli ci dwoje dalej się tak będą prztykać to nie dość że jest niedziela wieczór, to jeszcze będzie i humor popsuty...",
+    "Paroma szybkimi łykami dopiłem swój kufel, zapłaciłem karczmarzowi obciętym na brzegach talarem i zwinąłem się z karczmy nim zdążył zaprotestować.",
+    ""
+   ] 
