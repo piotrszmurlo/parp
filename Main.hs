@@ -2,20 +2,30 @@ module Main where
 import Rules.Utils
 import Rules.Endings
 import Rules.State
+import Rules.Help
+import Rules.Think
 
 gameIteration :: State -> IO ()
 gameIteration state = do
-    cmd <- readCommand
-    case cmd of
-        "komendy" -> do gameLoop state
-        "zastanow_sie" -> do gameLoop state
-        "rozejrzyj_sie" -> do gameLoop state
-        "podejdz Osoba" -> do gameLoop state
-        "pomocy" -> do gameLoop state
-        "podpisz" -> do gameLoop (sign state)
-        "koniec" -> return ()
-        _ -> do printUnknownCommand
+  cmd <- readCommand
+  case cmd of
+    "komendy" -> do printStateText state
+                    gameLoop state
+    "zastanow_sie" -> do
+                      state <- think state
+                      gameLoop state
+    "rozejrzyj_sie" -> do printStateText state
+                          gameLoop state
+    "podejdz Osoba" -> do printStateText state
+                          gameLoop state
+    "pomocy" -> do 
+                state <- help state
                 gameLoop state
+    "podpisz" -> do printStateText (sign state)
+                    gameLoop (sign state)
+    "koniec" -> return ()
+    _ -> do printUnknownCommand
+            gameLoop state
                 
 gameLoop :: State -> IO ()
 gameLoop state
@@ -24,6 +34,5 @@ gameLoop state
 
 main = do
     printExplicitWarning
-    printAvailableCommands
     gameLoop initialState
 

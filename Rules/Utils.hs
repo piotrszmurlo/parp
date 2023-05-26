@@ -1,5 +1,6 @@
 module Rules.Utils where
 import Rules.State
+import Rules.KarczmaIntro
 
 explicitWarningText = [
     "Witaj w grze 'Słów kilka o szkodliwości alkoholu'",
@@ -19,6 +20,7 @@ availableCommandsText = [
     "podejdz Osoba  -> Spróbuj podejść i porozmawiać z daną osobą",
     "pomocy  -> Zobacz podpowiedź",
     "komendy  -> Pokaż tę listę",
+    "UWAGA! Mogą istnieć inne (tajne) komendy dostępne tylko w wybranych momentach gry!",
     ""
     ]
 
@@ -38,9 +40,12 @@ readCommand = do
 printLines :: [String] -> IO ()
 printLines xs = putStr (unlines xs)
 
+printStateText :: State -> IO()
+printStateText state = printLines (stateText state)
+
 sign :: State -> State
 sign state =
     case stateName state of
-        Ostrzezenie -> State 5 Intro
+        Ostrzezenie -> karczmaIntroState
         otherwise -> state
 
