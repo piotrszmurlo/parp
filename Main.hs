@@ -4,6 +4,7 @@ import Rules.Endings
 import Rules.State
 import Rules.Help
 import Rules.Think
+import Rules.Choices
 
 gameIteration :: State -> IO ()
 gameIteration state = do
@@ -21,6 +22,12 @@ gameIteration state = do
     "pomocy" -> do 
                 state <- help state
                 gameLoop state
+    "jeden" -> do 
+               gameLoop (choiceOne state)
+    "dwa" -> do 
+             gameLoop (choiceTwo state)
+    "trzy" -> do 
+              gameLoop (choiceThree state)
     "podpisz" -> do printStateText (sign state)
                     gameLoop (sign state)
     "koniec" -> return ()

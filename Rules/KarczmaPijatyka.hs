@@ -3,7 +3,7 @@ import Rules.State
 
 karczmaPijatykaState = 
   State
-    5
+    3
     Ostrzezenie
     [""]
     [""]

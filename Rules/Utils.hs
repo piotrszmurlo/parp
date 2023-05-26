@@ -49,3 +49,28 @@ sign state =
         Ostrzezenie -> karczmaIntroState
         otherwise -> state
 
+debugEndState1 = 
+  State
+    1
+    Ostrzezenie
+    [""]
+    [""]
+    [""]
+    [""]
+debugEndState2 = 
+  State
+    2
+    Ostrzezenie
+    [""]
+    [""]
+    [""]
+    [""]
+
+debugEndState3 = 
+  State
+    3
+    Ostrzezenie
+    [""]
+    [""]
+    [""]
+    [""]
