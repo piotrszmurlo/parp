@@ -49,6 +49,10 @@ choiceOne state
                             printLines ["Niegrzeczny"]
                             printStateText lochState
                             return lochState
+            loch ->     do
+                        printLines lochChoiceOneText
+                        printLines salaTronowaText
+                        return salaTronowaState
             otherwise ->  do printLines ["choiceOne"]
                              return state
 
@@ -85,6 +89,10 @@ choiceTwo state
                             printLines ["Earned achivement : Czaruś"]
                             printStateText lochState
                             return lochState
+            loch ->     do
+                        printLines lochChoiceTwoText
+                        printLines minigameLochText
+                        return minigameLochState
             otherwise ->  do printLines ["choiceTwo"]
                              return state
 
