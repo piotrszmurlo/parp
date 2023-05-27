@@ -5,6 +5,10 @@ import Rules.KarczmaPijatyka
 import Rules.KarczmaIntro
 import Rules.PobudkaLoch
 import Rules.Burdel
+import Rules.SalaTronowa
+import Rules.Propozycja
+import Rules.PonownaPropozycja
+import Rules.MinigameLoch
 
 choiceOne :: State -> IO State
 choiceOne state
@@ -22,7 +26,23 @@ choiceOne state
             Burdel -> do
                       printLines burdelChoiceOneText
                       let endingState = state {endingNumber = 1}
+                      _ -> getChar
                       return endingState
+            SalaTronowa -> do
+                           printLines salaTronowaChoiceOneText
+                           let endingState = state {endingNumber = 4}
+                           _ -> getChar
+                           return endingState
+            Propozycja -> do
+                          printLines propozycjaChoiceOneText
+                          let endingState = state {endingNumber = 5}
+                          _ -> getChar
+                          return endingState
+            PonownaPropozycja ->  do
+                                  printLines propozycjaChoiceOneText
+                                  let endingState = state {endingNumber = 5}
+                                  _ -> getChar
+                                  return endingState
             otherwise ->  do printLines ["choiceOne"]
                              return state
 
@@ -42,6 +62,18 @@ choiceTwo state
             Burdel -> do
                       let endingState = state {endingNumber = 1}
                       return endingState
+            SalaTronowa -> do
+                           printLines salaTronowaChoiceTwoText
+                           printStateText propozycjaState
+                           return propozycjaState
+            Propozycja -> do
+                          printLines propozycjaChoiceTwoText
+                          printStateText ponownaPropozycjaState
+                          return ponownaPropozycjaState
+            PonownaPropozycja ->  do
+                                  printLines ponownaPropozycjaChoiceTwoText
+                                  printStateText minigameLochState
+                                  return minigameLochState
             otherwise ->  do printLines ["choiceTwo"]
                              return state
 
@@ -58,5 +90,10 @@ choiceThree state
                                printLines karczmaPijatykaAllChoicesText
                                printStateText pobudkaLochState
                                return pobudkaLochState
+            PonownaPropozycja ->  do
+                                  printLines ponownaPropozycjaChoiceThreeText
+                                  let endingState = state {endingNumber = 4}
+                                  _ -> getChar
+                                  return endingState
             otherwise ->  do printLines ["choiceThree"]
                              return state

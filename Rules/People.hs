@@ -4,6 +4,9 @@ import Rules.Utils
 import Rules.KarczmaPijatyka
 import Rules.KarczmaIntro
 import Rules.Burdel
+import Rules.SalaTronowa
+import Rules.Propozycja
+import Rules.PonownaPropozycja
 
 peopleLook :: State -> IO State
 peopleLook state = do

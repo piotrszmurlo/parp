@@ -12,4 +12,7 @@ think state = do
         KarczmaIntro -> return (unlockChoices state 3)
         KarczmaPijatyka -> return (unlockChoices state 3)
         Burdel -> return (unlockChoices state 2)
+        SalaTronowa -> return (unlockChoices state 2)
+        Propozycja -> return (unlockChoices state 2)
+        PonownaPropozycja -> return (unlockChoices state 3)
         otherwise -> return state

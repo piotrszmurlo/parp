@@ -7,7 +7,6 @@ karczmaIntroState =
     KarczmaIntro
     karczmaIntroText
     karczmaIntroHelpText
-    karczmaIntroLookAroundText
     karczmaIntroThinkText
     False
     False
@@ -41,12 +40,6 @@ karczmaIntroThinkText = [
     "(jeden) Spróbuj uspokoić towarzystwo",
     "(dwa) Sprowokuj bójkę",
     "(trzy) Zignoruj kłótnię",
-    ""
-    ]
-
-karczmaIntroLookAroundText = [
-    "Dwoje teraz kłócących się starszych panów",
-    "Osoby: willy, sil",
     ""
     ]
 
