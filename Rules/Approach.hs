@@ -6,6 +6,9 @@ import Rules.KarczmaIntro
 import Rules.Burdel
 import Rules.KarczmaPijatyka
 import Rules.PobudkaLoch
+import Rules.SalaTronowa
+import Rules.Propozycja
+import Rules.PonownaPropozycja
 
 approach :: String -> State -> IO State
 approach personName state =
@@ -57,6 +60,8 @@ karczmaRozmowa state = do
         "> To śpiewaj gdzie indziej",
         "Pociągnąłem łyk nowego trunku i z uznaniem popatrzyłem na kufel. Jednak warto było się przysiąść"
         ]
+    _ -> getChar
+    printStateText karczmaPijatykaState
     return karczmaPijatykaState
 
 wilSilPijatyka :: State -> IO State
@@ -98,4 +103,6 @@ burdelPrzechwalki state = do
         "> Przekażę twoją propozycję królowi - Postać w pelerynie nie okazała się piękną damą. Nagle mnie zmroziło. Cały nastrój się rozwiał.",
         "> N-nie jesteś ślicznotką - wyjąkałem. A taki był miły wieczór."
         ]
+    _ <- getChar
+    printStateText pobudkaLochState
     return pobudkaLochState

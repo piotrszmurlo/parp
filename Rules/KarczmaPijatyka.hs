@@ -7,7 +7,6 @@ karczmaPijatykaState =
     KarczmaPijatyka
     karczmaPijatykaText
     karczmaPijatykaHelpText
-    karczmaPijatykaLookAroundText
     karczmaPijatykaThinkText
     False
     False
@@ -28,13 +27,6 @@ karczmaPijatykaThinkText = [
     "(jeden.) Pij na zdrowie bo się ściemnia...",
     "(dwa.) Oczywiście że nie szkodzi...",
     "(trzy.) Od jutra jestem zadeklarowanym abstynentem, przysięgam..."
-    ]
-
-karczmaPijatykaLookAroundText = [
-    "Dobrze się pije w miłym towarzystwie...",
-    "Osoby: willy, sil",
-    "Ale czy koniecznie ci żołnierze muszą tak dziwnie się gapić?",
-    ""
     ]
 
 karczmaPijatykaAllChoicesText = [

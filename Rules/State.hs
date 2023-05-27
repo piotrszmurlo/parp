@@ -1,13 +1,12 @@
 module Rules.State where
 
-data Name = Ostrzezenie | KarczmaIntro | KarczmaPijatyka | PobudkaLoch | Burdel | SalaTronowa | Propozycja | PonownaPropozycja
+data Name = Ostrzezenie | KarczmaIntro | KarczmaPijatyka | PobudkaLoch | MinigameLoch | Burdel | SalaTronowa | Propozycja | PonownaPropozycja
 data State = State
   {
     endingNumber :: Integer,
     stateName :: Name,
     stateText :: [String],
     helpText :: [String],
-    lookAroundText :: [String],
     thinkText :: [String],
     optionOneEnabled :: Bool,
     optionTwoEnabled :: Bool,
@@ -24,7 +23,6 @@ initialState =
     Ostrzezenie
     [""]
     ["helpOstrzezenie"]
-    [""]
     [""]
     False
     False

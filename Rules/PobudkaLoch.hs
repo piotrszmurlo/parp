@@ -6,7 +6,6 @@ pobudkaLochState =
     PobudkaLoch
     pobudkaLochText
     pobudkaLochHelpText
-    pobudkaLochLookAroundText
     pobudkaLochThinkText
     False
     False
@@ -15,5 +14,4 @@ pobudkaLochState =
 
 pobudkaLochText =  ["pobudkaLochText"]
 pobudkaLochHelpText = ["pobudkaLochHelpText"]
-pobudkaLochLookAroundText = ["pobudkaLochLookAroundText"]
 pobudkaLochThinkText = ["pobudkaLochThinkText"]

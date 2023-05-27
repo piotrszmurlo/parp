@@ -6,7 +6,6 @@ burdelState =
     Burdel
     burdelText
     burdelHelpText
-    burdelLookAroundText
     burdelThinkText
     False
     False
@@ -23,10 +22,6 @@ burdelText =  [
     ]
 burdelHelpText = [
     "Te ślicznotki z pewnością chcą posłuchać o moich wspaniałych dokonaniach"
-    ]
-burdelLookAroundText = [
-    "Ależ ta kobieta na recepcji ma przód...",
-    "A te dwie co zeszły z góry też nie wypadły sroce spod ogona..."
     ]
     
 burdelThinkText = [

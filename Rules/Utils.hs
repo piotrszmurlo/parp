@@ -23,7 +23,7 @@ availableCommandsText = [
     ""
     ]
 
-unknownCommandText = ["Nieznana komenda. Uzyj <pomoc> aby uzyskać listę dostępnych komend", ""]
+unknownCommandText = ["Nieznana komenda. Uzyj <komendy> aby uzyskać listę dostępnych komend", ""]
 
 printExplicitWarning = printLines explicitWarningText
 printAvailableCommands = printLines availableCommandsText
@@ -66,7 +66,6 @@ debugEndState1 =
     [""]
     [""]
     [""]
-    [""]
     False
     False
     False
@@ -79,7 +78,6 @@ debugEndState2 =
     [""]
     [""]
     [""]
-    [""]
     False
     False
     False
@@ -89,7 +87,6 @@ debugEndState3 =
   State
     3
     Ostrzezenie
-    [""]
     [""]
     [""]
     [""]
