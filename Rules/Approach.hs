@@ -32,6 +32,7 @@ findPersonAction personName state =
             ("król", SalaTronowa) -> Just podejdzKrol
             ("król", Propozycja) -> Just podejdzKrol
             ("król", PonownaPropozycja) -> Just podejdzKrol
+            ("strażnik", PobudkaLoch) -> Just podejdzStraznik
             _ -> Nothing
     else
         Nothing
@@ -60,7 +61,7 @@ karczmaRozmowa state = do
         "> To śpiewaj gdzie indziej",
         "Pociągnąłem łyk nowego trunku i z uznaniem popatrzyłem na kufel. Jednak warto było się przysiąść"
         ]
-    _ -> getChar
+    -- _ -> getChar
     printStateText karczmaPijatykaState
     return karczmaPijatykaState
 
@@ -106,3 +107,11 @@ burdelPrzechwalki state = do
     _ <- getChar
     printStateText pobudkaLochState
     return pobudkaLochState
+
+podejdzStraznik :: State -> IO State
+podejdzStraznik state = do
+    printLines [ "Cześć pijaku. Nieźle się wczoraj zabawiłeś. Król chce cię rano widzieć - nie chciałbym być wtedy w twojej skórze.",
+        "(jeden.) Odwal się ode mnie, łeb mi pęka.",
+        "(dwa.) Ech, nic nie pamiętam. Mam nadzieję, że nie było tak źle i jednak okaże mi trochę litości."
+        ]
+    return state

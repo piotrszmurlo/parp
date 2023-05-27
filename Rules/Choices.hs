@@ -9,6 +9,7 @@ import Rules.SalaTronowa
 import Rules.Propozycja
 import Rules.PonownaPropozycja
 import Rules.MinigameLoch
+import Rules.Loch
 
 choiceOne :: State -> IO State
 choiceOne state
@@ -19,30 +20,35 @@ choiceOne state
             KarczmaIntro -> do printLines karczmaIntroChoiceOneText
                                printStateText karczmaPijatykaState
                                return karczmaPijatykaState
-            KarczmaPijatyka -> do 
+            KarczmaPijatyka -> do
                                printLines karczmaPijatykaAllChoicesText
                                printStateText pobudkaLochState
                                return pobudkaLochState
             Burdel -> do
                       printLines burdelChoiceOneText
                       let endingState = state {endingNumber = 1}
-                      _ -> getChar
+                      -- _ -> getChar
                       return endingState
             SalaTronowa -> do
                            printLines salaTronowaChoiceOneText
                            let endingState = state {endingNumber = 4}
-                           _ -> getChar
+                           -- _ -> getChar
                            return endingState
             Propozycja -> do
                           printLines propozycjaChoiceOneText
                           let endingState = state {endingNumber = 5}
-                          _ -> getChar
+                          -- _ -> getChar
                           return endingState
             PonownaPropozycja ->  do
                                   printLines propozycjaChoiceOneText
                                   let endingState = state {endingNumber = 5}
-                                  _ -> getChar
+                                  -- _ -> getChar
                                   return endingState
+            PobudkaLoch ->  do
+                            printLines pobudkaLochChoiceOneText
+                            printLines ["Niegrzeczny"]
+                            printStateText lochState
+                            return lochState
             otherwise ->  do printLines ["choiceOne"]
                              return state
 
@@ -55,7 +61,7 @@ choiceTwo state
             KarczmaIntro -> do printLines karczmaIntroChoiceTwoText
                                printStateText burdelState
                                return burdelState
-            KarczmaPijatyka -> do 
+            KarczmaPijatyka -> do
                                printLines karczmaPijatykaAllChoicesText
                                printStateText pobudkaLochState
                                return pobudkaLochState
@@ -74,6 +80,11 @@ choiceTwo state
                                   printLines ponownaPropozycjaChoiceTwoText
                                   printStateText minigameLochState
                                   return minigameLochState
+            PobudkaLoch ->  do
+                            printLines pobudkaLochChoiceTwoText
+                            printLines ["Earned achivement : Czaruś"]
+                            printStateText lochState
+                            return lochState
             otherwise ->  do printLines ["choiceTwo"]
                              return state
 
@@ -86,14 +97,14 @@ choiceThree state
             KarczmaIntro -> do printLines karczmaIntroChoiceThreeText
                                printStateText burdelState
                                return burdelState
-            KarczmaPijatyka -> do 
+            KarczmaPijatyka -> do
                                printLines karczmaPijatykaAllChoicesText
                                printStateText pobudkaLochState
                                return pobudkaLochState
             PonownaPropozycja ->  do
                                   printLines ponownaPropozycjaChoiceThreeText
                                   let endingState = state {endingNumber = 4}
-                                  _ -> getChar
+                                  --_ -> getChar
                                   return endingState
             otherwise ->  do printLines ["choiceThree"]
                              return state
