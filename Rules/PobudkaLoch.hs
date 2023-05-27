@@ -10,7 +10,7 @@ pobudkaLochState =
     True
     True
     False
-    ["strażnik"]
+    [""]
 
 pobudkaLochText =  ["\nŚmierdzi i jest niewygodnie..."]
 pobudkaLochHelpText = ["Moze by ktoś mi powiedział co tu robię...?"]

@@ -7,6 +7,8 @@ import Rules.Burdel
 import Rules.SalaTronowa
 import Rules.Propozycja
 import Rules.PonownaPropozycja
+import Rules.PobudkaLoch
+import Rules.Loch
 
 peopleLook :: State -> IO State
 peopleLook state = do
@@ -25,6 +27,7 @@ getAllPossiblePeople state =
        SalaTronowa -> ["król"]
        Propozycja -> ["król"]
        PonownaPropozycja -> ["król"]
+       PobudkaLoch -> ["strażnik"]
        _ -> []
 
 
@@ -37,4 +40,6 @@ peopleText state =
         SalaTronowa -> ["Jestem sam na sam z królem.", "Osoby: król"]
         Propozycja -> ["Jestem sam na sam z królem.", "Osoby: król"]
         PonownaPropozycja -> ["Jestem sam na sam z królem.", "Osoby: król"]
+        PobudkaLoch -> ["Otwierasz oczy - jesteś w mokrym, zimnym lochu. Za kratami stoi strażnik.", "Osoby: strażnik"]
+        loch -> ["Zimno, mokro i samotnie - zalety typowego lochu... Nie żebym miał doświadczenie!"]
         _ -> []
