@@ -11,6 +11,7 @@ burdelState =
     False
     False
     False
+    [""]
 
 burdelText =  [
     "Świeże powietrze uderza mnie w twarz. Mrużąc oczy w wietrze, spostrzegam nagle po drugiej stronie ulicy świecący w nocy szyld 'Dom spotkań: Zalotka'.",

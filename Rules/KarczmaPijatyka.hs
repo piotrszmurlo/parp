@@ -12,6 +12,7 @@ karczmaPijatykaState =
     False
     False
     False
+    [""]
 
 karczmaPijatykaHelpText = ["Msze, *hic*, jszcz troh alllk?"]
 

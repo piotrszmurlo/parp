@@ -11,6 +11,7 @@ pobudkaLochState =
     False
     False
     False
+    [""]
 
 pobudkaLochText =  ["pobudkaLochText"]
 pobudkaLochHelpText = ["pobudkaLochHelpText"]

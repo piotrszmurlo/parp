@@ -12,6 +12,7 @@ karczmaIntroState =
     False
     False
     False
+    [""]
 
 karczmaIntroHelpText = ["Może warto chwilę posiedzieć i posłuchać dalszej dyskusji?"]
 

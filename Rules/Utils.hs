@@ -14,10 +14,9 @@ explicitWarningText = [
 
 availableCommandsText = [
     "Dostępne komendy:",
-    "",
-    "zastanow_sie  -> Zobacz co ci w sercu gra",
+    "zastanow_sie   -> Zobacz co ci w sercu gra",
     "rozejrzyj_sie  -> Zobacz co jest wokół ciebie",
-    "podejdz Osoba  -> Spróbuj podejść i porozmawiać z daną osobą",
+    "podejdz        -> Spróbuj podejść i porozmawiać z daną osobą",
     "pomocy  -> Zobacz podpowiedź",
     "komendy  -> Pokaż tę listę",
     "UWAGA! Mogą istnieć inne (tajne) komendy dostępne tylko w wybranych momentach gry!",
@@ -42,6 +41,9 @@ printLines xs = putStr (unlines xs)
 
 printStateText :: State -> IO()
 printStateText state = printLines (stateText state)
+
+printCommandsText :: State -> IO()
+printCommandsText state = printLines availableCommandsText
 
 sign :: State -> State
 sign state =
@@ -68,6 +70,7 @@ debugEndState1 =
     False
     False
     False
+    [""]
 
 debugEndState2 = 
   State
@@ -80,6 +83,7 @@ debugEndState2 =
     False
     False
     False
+    [""]
 
 debugEndState3 = 
   State
@@ -92,3 +96,4 @@ debugEndState3 =
     False
     False
     False
+    [""]
