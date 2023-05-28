@@ -19,6 +19,19 @@ minigameLochText =  ["Z nową determinacją bierzesz los w swoje ręce"]
 minigameLochHelpText = ["Moze warto podnies(ć) przedmioty lezące na ziemi i je polacz(yć)? Tylko szybko, mam tylko [4] chwile"]
 minigameLochThinkText = ["Hmm... moze udałoby mi się jakoś otworzyć tę celę jakimś zagiętym kawałkiem metalu...?"]
 
+przejscieKoloStraznikowText = ["Wchodzisz do korytarza na środku którego stoi obrócony plecami straznik. Dobrze, ze trzymasz w ręku kamień.",
+                              "Kamień łączy się z głową zdezorientowanego straznika. Zakładasz jego zbroję, aby nie zwrócić na siebie uwagi i idziesz dalej.",
+                              "Mijasz się z grupą strazników. Jest tam ten z poprzedniej warty.",
+                              "Zeby mnie tylko nie rozpoznał... "
+                              ]
+przejscieKoloStraznikowSuccessText = ["Straznicy przechodzą obok niewzruszeni.",
+                                      "Uf, dobrze, ze nie próbowałem się z nim zaznajomić"
+                              ]
+przejscieKoloStraznikowFailText = ["Znajomy ci straznik zwraca na ciebie uwagę...",
+                                    "> Skądś cię kojarze...",
+                                    "Popatrzył podejrzliwie i chwilę się zastanawiał. Odór alkoholu na pewno zagrał tu kluczową rolę...",
+                                    "> Brać go!"
+                              ]
 minigameLoop :: Int -> Bool -> Bool -> Bool -> IO Bool --true jeśli wygrałeś, false jeśli przegrałeś
 minigameLoop turns stone clothes pot
   | turns <= 0 = return False

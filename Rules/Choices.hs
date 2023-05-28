@@ -47,7 +47,6 @@ choiceOne state
                                   return endingState
             PobudkaLoch ->  do
                             printLines pobudkaLochChoiceOneText
-                            printLines ["Niegrzeczny"]
                             printStateText lochState
                             return lochState
             loch ->     do
@@ -96,10 +95,18 @@ choiceTwo state
                         result <- minigameLoop 4 False False False -- true / przeszedłem, false / nie przeszedłem
                         if result
                             then do
-                                printLines ["Przejście koło strażników"]
+                                --Przejście koło strażników
+                                printLines przejscieKoloStraznikowText
                                 value <- achivementCzarus False
-                                putStrLn $ "Czaruś: " ++ show value
-                                return salaTronowaState
+                                if value == 0
+                                    then do
+                                        printLines przejscieKoloStraznikowSuccessText
+                                        let endingState = state {endingNumber = 3}
+                                        return endingState
+                                    else do
+                                        printLines przejscieKoloStraznikowFailText
+                                        let endingState = state {endingNumber = 2}
+                                        return endingState
                             else do
                                 printStateText salaTronowaState
                                 return salaTronowaState
