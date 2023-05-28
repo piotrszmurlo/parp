@@ -15,7 +15,7 @@ minigameLochState =
     False
     [""]
 
-minigameLochText =  ["minigameLochText"]
+minigameLochText =  ["Z nową determinacją bierzesz los w swoje ręce"]
 minigameLochHelpText = ["Moze warto podnies(ć) przedmioty lezące na ziemi i je polacz(yć)? Tylko szybko, mam tylko [4] chwile"]
 minigameLochThinkText = ["Hmm... moze udałoby mi się jakoś otworzyć tę celę jakimś zagiętym kawałkiem metalu...?"]
 
@@ -43,7 +43,7 @@ minigameLoop turns stone clothes pot
                         printLines ["Nie ma tu takiej rzeczy..."]
                         minigameLoop turns stone clothes pot
       "polacz" -> do
-                  if stone && pot
+                  if stone && clothes
                     then do
                       printLines ["Któz by pomyślał, ze da się z paska zrobić taki ładny wytrych.", "Udało ci się otworzyć kłódkę!"]
                       return True

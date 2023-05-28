@@ -92,7 +92,14 @@ choiceTwo state
             loch ->     do
                         printLines lochChoiceTwoText
                         printLines minigameLochText
-                        return minigameLochState
+                        result <- minigameLoop 4 False False False -- true / przeszedłem, false / nie przeszedłem
+                        if result
+                            then do
+                                printLines ["Przejście koło strażników"]
+                                return salaTronowaState
+                            else do
+                                printStateText salaTronowaState
+                                return salaTronowaState
             otherwise ->  do printLines ["choiceTwo"]
                              return state
 
