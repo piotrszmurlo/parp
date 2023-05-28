@@ -1,6 +1,8 @@
 module Rules.Utils where
 import Rules.State
 import Rules.KarczmaIntro
+import Data.IORef
+import System.IO.Unsafe
 
 explicitWarningText = [
     "Witaj w grze 'Słów kilka o szkodliwości alkoholu'",
@@ -58,8 +60,26 @@ unlockChoices state numberOfOptions
     | numberOfOptions == 3 = state { optionOneEnabled = True, optionTwoEnabled = True, optionThreeEnabled = True}
     | otherwise = state
 
+
+-- achivements
+
+czarusCounter :: IORef Int
+czarusCounter = unsafePerformIO (newIORef 0)
+{-# NOINLINE czarusCounter #-}
+
+achivementCzarus :: Bool -> IO Int
+achivementCzarus increment = atomicModifyIORef' czarusCounter $ \n ->
+  if increment
+    then (n + 1, n + 1)
+    else (n, n)
+
+--value1 <- incrementCounter True  // 1
+--value2 <- incrementCounter True  // 2
+--value3 <- incrementCounter False // 2
+--value4 <- incrementCounter True  // 3
+
 -- to do wyrzucenia pozniej
-debugEndState1 = 
+debugEndState1 =
   State
     1
     Ostrzezenie
@@ -71,7 +91,7 @@ debugEndState1 =
     False
     [""]
 
-debugEndState2 = 
+debugEndState2 =
   State
     2
     Ostrzezenie
@@ -83,7 +103,7 @@ debugEndState2 =
     False
     [""]
 
-debugEndState3 = 
+debugEndState3 =
   State
     3
     Ostrzezenie

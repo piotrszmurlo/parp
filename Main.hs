@@ -25,16 +25,16 @@ gameIteration state = do
                     personName <- getLine
                     state <- approach personName state
                     gameLoop state
-    "pomocy" -> do 
+    "pomocy" -> do
                 state <- help state
                 gameLoop state
-    "jeden" -> do 
+    "jeden" -> do
                state <- choiceOne state
                gameLoop state
-    "dwa" -> do 
+    "dwa" -> do
              state <- choiceTwo state
              gameLoop state
-    "trzy" -> do 
+    "trzy" -> do
              state <- choiceThree state
              gameLoop state
     "podpisz" -> do printStateText (sign state)
@@ -42,7 +42,7 @@ gameIteration state = do
     "koniec" -> return ()
     _ -> do printUnknownCommand
             gameLoop state
-                
+
 gameLoop :: State -> IO ()
 gameLoop state
   | isGameInProgress state = gameIteration state

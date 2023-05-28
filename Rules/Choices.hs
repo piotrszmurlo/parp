@@ -10,6 +10,7 @@ import Rules.Propozycja
 import Rules.PonownaPropozycja
 import Rules.MinigameLoch
 import Rules.Loch
+import Data.IORef
 
 choiceOne :: State -> IO State
 choiceOne state
@@ -86,7 +87,7 @@ choiceTwo state
                                   return minigameLochState
             PobudkaLoch ->  do
                             printLines pobudkaLochChoiceTwoText
-                            printLines ["Earned achivement : Czaruś"]
+                            value <- achivementCzarus True
                             printStateText lochState
                             return lochState
             loch ->     do
@@ -96,6 +97,8 @@ choiceTwo state
                         if result
                             then do
                                 printLines ["Przejście koło strażników"]
+                                value <- achivementCzarus False
+                                putStrLn $ "Czaruś: " ++ show value
                                 return salaTronowaState
                             else do
                                 printStateText salaTronowaState
