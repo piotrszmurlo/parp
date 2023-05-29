@@ -32,6 +32,10 @@ przejscieKoloStraznikowFailText = ["Znajomy ci straznik zwraca na ciebie uwagę.
                                     "Popatrzył podejrzliwie i chwilę się zastanawiał. Odór alkoholu na pewno zagrał tu kluczową rolę...",
                                     "> Brać go!"
                               ]
+folkisAfterText = ["Cześć przystojniaku - wyszczerzyła się do mnie morda strażnika zza więziennych krat,",
+                    "które bez powodzenia próbowałem właśnie sforsować. - Twoja randka zdaje się na ciebie już czekać.",
+                    "z paskudnym chichotem odsunął się ukazując patrzącego na mnie beznamiętnie muskularnego olbrzyma w czerwonym kapturze..."
+                  ]
 minigameLoop :: Int -> Bool -> Bool -> Bool -> IO Bool --true jeśli wygrałeś, false jeśli przegrałeś
 minigameLoop turns stone clothes pot
   | turns <= 0 = return False

@@ -83,7 +83,25 @@ choiceTwo state
             PonownaPropozycja ->  do
                                   printLines ponownaPropozycjaChoiceTwoText
                                   printStateText minigameLochState
-                                  return minigameLochState
+                                  result <- minigameLoop 4 False False False
+                                  if result
+                                    then do
+                                        --Przejście koło strażników
+                                        printLines przejscieKoloStraznikowText
+                                        value <- achivementCzarus False
+                                        if value == 0
+                                            then do
+                                                printLines przejscieKoloStraznikowSuccessText
+                                                let endingState = state {endingNumber = 3}
+                                                return endingState
+                                            else do
+                                                printLines przejscieKoloStraznikowFailText
+                                                let endingState = state {endingNumber = 2}
+                                                return endingState
+                                    else do
+                                        printLines folkisAfterText
+                                        let endingState = state {endingNumber = 6}
+                                        return endingState
             PobudkaLoch ->  do
                             printLines pobudkaLochChoiceTwoText
                             value <- achivementCzarus True
